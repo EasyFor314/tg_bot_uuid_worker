@@ -18,7 +18,9 @@ mGlobalDisp.middleware.setup(LoggingMiddleware())
 
 async def set_default_commands():
     '''Установить возможные команды для бота'''
-    return
+    await mGlobalDisp.bot.set_my_commands([
+        types.BotCommand("start", "Начало"),
+    ])
 
 async def on_startup(mDisp):
     logging.info('Настройка перед запуском')
