@@ -1,0 +1,13 @@
+version: '1.0'
+services:
+  bot:
+    container_name: bot
+    build: .
+    env_file:
+      - ./.env
+    restart: always
+    command: "ado start"
+    ports:
+      - "8080:8080" 
+    volumes:
+      - ".:/app"
