@@ -27,7 +27,7 @@ async def on_startup(mDisp):
 
     import handlers
     # Установим обработчики
-    handlers.setup(dp)
+    handlers.setup(mGlobalDisp )
 
     logging.info('Starting connection. ')
     if settings.WEBHOOKS_MODE is True:
