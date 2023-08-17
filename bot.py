@@ -2,6 +2,15 @@
 Файл точки входа в нашего бота, вызывается из do.py
 '''
 import logging
+import settings
+import asyncio
+
+from aiogram import Bot, types
+from aiogram.contrib.middlewares.logging import LoggingMiddleware
+from aiogram.dispatcher import Dispatcher
+from aiogram.utils.executor import start_webhook, start_polling
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from aiogram.utils import exceptions, executor
 
 bot = Bot(token=settings.BOT_TOKEN)
 mGlobalDisp = Dispatcher(bot, storage=MemoryStorage())
