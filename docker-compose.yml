@@ -1,13 +1,13 @@
 version: '1.0'
 services:
   bot:
-    container_name: bot
+    container_name: bot_uuid
     build: .
     env_file:
       - ./.env
     restart: always
     command: "ado start"
-    ports:
-      - "8080:8080" 
+    #ports:
+    #  - "8081:8081" 
     volumes:
       - ".:/app"
