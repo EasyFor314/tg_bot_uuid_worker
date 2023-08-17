@@ -9,7 +9,7 @@ if not BOT_TOKEN:
     quit()
 
 # webhook settings
-WEBHOOKS_MODE = (os.getenv('WEBHOOKS_MODE', 'True') == 'True')
+WEBHOOKS_MODE = False#(os.getenv('WEBHOOKS_MODE', 'True') == 'True')
 # TODO Заполнить при необходиомости
 WEBHOOK_URL = None
 WEBHOOK_PATH = None
