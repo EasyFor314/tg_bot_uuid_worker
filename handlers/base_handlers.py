@@ -12,8 +12,8 @@ async def bot_start(msg: types.Message):
 
 async def convert_string_to_uuid(msg: types.Message):
     try:
-        output_msg = str(uuid.UUID(msg.text))
-        await msg.answer(output_msg)
+        output_msg = '`' + str(uuid.UUID(msg.text)) + '`'
+        await msg.answer(output_msg, parse_mode= "Markdown")
     except Exception as error:
         logging.error('Возникла ошибка {0}'.format(str(error)))
         await msg.answer("Произошла ошибка, повторите позднее")
