@@ -12,7 +12,7 @@ async def bot_start(msg: types.Message):
 
 async def convert_string_to_uuid(msg: types.Message):
     try:
-        output_msg = uuid.UUID(msg.text).hex
+        output_msg = str(uuid.UUID(msg.text))
         await msg.answer(output_msg)
     except Exception as error:
         logging.error('Возникла ошибка {0}'.format(str(error)))
