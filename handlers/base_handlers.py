@@ -22,6 +22,7 @@ async def gen_uuid(call: types.CallbackQuery):
     try:
         output_msg = '`' + str(uuid.uuid4()) + '`'
         await call.message.answer(output_msg, parse_mode= "Markdown") 
+        await call.answer()
     except Exception as error:
         logging.error('Возникла ошибка {0}'.format(str(error)))
         await msg.answer("Произошла ошибка, повторите позднее")
