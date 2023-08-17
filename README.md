@@ -1,5 +1,5 @@
 ______________________
-# Шаблон для разворота telegram бота в Docker
+# TODO Шаблон для разворота telegram бота в Docker
 
 1. Установите docker и docker-compose
 2. Добавьте файл .env на основе шаблона .env_docker_example и заполните необходимые значения
