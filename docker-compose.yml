@@ -6,6 +6,6 @@ services:
     restart: always
     command: "ado start"
     healthcheck:
-      disable: true
+      test: ["NONE"]
     #ports:
     #  - "8081:8081" 
