@@ -5,5 +5,7 @@ services:
     build: .
     restart: always
     command: "ado start"
+    healthcheck:
+      disable: true
     #ports:
     #  - "8081:8081" 
